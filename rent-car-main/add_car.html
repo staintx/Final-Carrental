@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Add New Car</title>
+</head>
+<body>
+    <section class="add-car">
+        <div class="container">
+            <div class="title">
+                <h2>Add New Car</h2>
+                <h4>Vehicle Details</h4>
+            </div>
+
+            <form action="add_car.php" method="POST" enctype="multipart/form-data" style="max-width: 600px; margin: 0 auto;">
+                <div style="background: var(--color-bg); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--shadow);">
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="make" style="display: block; margin-bottom: 0.5rem;">Make:</label>
+                        <input type="text" id="make" name="make" required 
+                               style="width: 100%; padding: 0.8rem; background: var(--color-tertiary); 
+                                      border-radius: 0.3rem; color: var(--color-primary);">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="model" style="display: block; margin-bottom: 0.5rem;">Model:</label>
+                        <input type="text" id="model" name="model" required 
+                               style="width: 100%; padding: 0.8rem; background: var(--color-tertiary); 
+                                      border-radius: 0.3rem; color: var(--color-primary);">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="year" style="display: block; margin-bottom: 0.5rem;">Year:</label>
+                        <input type="number" id="year" name="year" required 
+                               style="width: 100%; padding: 0.8rem; background: var(--color-tertiary); 
+                                      border-radius: 0.3rem; color: var(--color-primary);">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="price_per_day" style="display: block; margin-bottom: 0.5rem;">Price per day:</label>
+                        <input type="number" id="price_per_day" name="price_per_day" required step=".01" 
+                               style="width: 100%; padding: 0.8rem; background: var(--color-tertiary); 
+                                      border-radius: 0.3rem; color: var(--color-primary);">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="car_img" style="display: block; margin-bottom: 0.5rem;">Upload photo:</label>
+                        <input type="file" id="car_img" name="car_img" 
+                               style="width: 100%; padding: 0.8rem; background: var(--color-tertiary); 
+                                      border-radius: 0.3rem; color: var(--color-primary);">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="car_type" style="display: block; margin-bottom: 0.5rem;">Car Type:</label>
+                        <select id="car_type" name="car_type" 
+                                style="width: 100%; padding: 0.8rem; background: var(--color-tertiary); 
+                                       border-radius: 0.3rem; color: var(--color-primary);">
+                            <option value="SUV">SUV</option>
+                            <option value="Sport">Sport</option>
+                            <option value="Sedan">Sedan</option>
+                            <option value="Van">Van</option>
+                            <option value="Pickup">Pickup Truck</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%; text-align: center;">Add Car</button>
+                </div>
+            </form>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="admin_dashboard.php" class="btn">Back to Dashboard</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
